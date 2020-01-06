@@ -1,2 +1,6 @@
+1.
 [].append() has no return value,so can't be assign to any variable,otherwise ,the variable will equal to None.
+2.
+When using a loop is improtant to aware that the thing within the loop is generating again and again.
+3.
 
