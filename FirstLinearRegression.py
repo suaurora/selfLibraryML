@@ -10,7 +10,7 @@ import random
 
 random.seed(1)
 
-class Classification:
+class Regression:
     
     def __init__(self,x,y,alpha = 0.01,epochs = 100):
         [x[i].append(1) for i in range(len(x))]
@@ -79,13 +79,13 @@ class Classification:
 x = [[1,2,3,4],[5,6,7,8]]
 y = [2,6]
 
-clf = Classification(x,y)
-clf.show()
-weight = clf.sgd()
-y_ = clf.predict(weight)
-print(clf.mse(y_,y))
-y_1 = clf.predict([0.13, 0.85, 0.76, 0.26, 0.5])
-print(clf.mse(y_1,y))
+reg = Regression(x,y)
+reg.show()
+weight = reg.sgd()
+y_ = reg.predict(weight)
+print(reg.mse(y_,y))
+y_1 = reg.predict([0.13, 0.85, 0.76, 0.26, 0.5])
+print(reg.mse(y_1,y))
 print("*" * 10)
 print(weight)
 print()
