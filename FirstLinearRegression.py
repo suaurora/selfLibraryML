@@ -12,7 +12,7 @@ random.seed(1)
 
 class Regression:
     
-    def __init__(self,x,y,alpha = 0.01,epochs = 100):
+    def __init__(self,x,y,alpha = 0.01,epochs = 100000):
         [x[i].append(1) for i in range(len(x))]
         self.x = x 
         self.y = y
@@ -88,5 +88,4 @@ y_1 = reg.predict([0.13, 0.85, 0.76, 0.26, 0.5])
 print(reg.mse(y_1,y))
 print("*" * 10)
 print(weight)
-print()
 print("*" * 10)
