@@ -96,14 +96,3 @@ class LassoRegression:
                 self.w[j] -= self.alpha * tt[j]
                     
         return self.w,self.b
-            
-a = LassoRegression([[1,2,3,4],[5,6,7,8]],[2,6])         
-print(a.cost_function())   
-print(a.show_parameters())
-print("*")
-w,b_1 = a.sgd()
-print(w,b_1)
-y_pred = a.predict(w,b_1)
-print(y_pred)
-
-print(a.mse(y_pred,[2,6]))
