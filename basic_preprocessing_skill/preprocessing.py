@@ -56,3 +56,15 @@ class preprocessing_label:
             y_.append(y__)
 
         return y_
+    
+def train_test_split(x,test_ratio):
+    test_length = int(len(x) * test_ratio)
+    return x[:test_length],x[test_length:]
+
+import numpy as np
+
+a = np.random.random((10,10))
+print(len(a))
+
+a_test,a_train = train_test_split(a,0.2)
+print(len(a_train))
